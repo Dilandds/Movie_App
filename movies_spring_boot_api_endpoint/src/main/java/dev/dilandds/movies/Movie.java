@@ -22,7 +22,7 @@ public class Movie {
     //framework will take Id as a uniques identifier for each movie
     @Id
     private ObjectId id;
-    private String imdbIid;
+    private String imdbId;
     private String title;
     private String releaseDate;
     private String trailerLink;
