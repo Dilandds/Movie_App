@@ -7,6 +7,7 @@ import ReviewForm from "../reviewform/ReviewForm";
 import React from "react";
 
 const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
+  console.log("rrr", reviews);
   const revText = useRef();
   let params = useParams();
   const movieId = params.movieId;
@@ -25,6 +26,8 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
         reviewBody: rev.value,
         imdbId: movieId,
       });
+
+      console.log(reviews);
 
       const updatedReviews = [...reviews, { body: rev.value }];
 
