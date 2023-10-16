@@ -1,4 +1,5 @@
 import { Form, Button } from "react-bootstrap";
+import "./ReviewForm.css";
 
 const ReviewForm = ({ handleSubmit, revText, labelText, defaultValue }) => {
   return (
@@ -12,7 +13,11 @@ const ReviewForm = ({ handleSubmit, revText, labelText, defaultValue }) => {
           defaultValue={defaultValue}
         />
       </Form.Group>
-      <Button variant="outline-info" onClick={handleSubmit}>
+      <Button
+        variant="outline-info"
+        className="gold-btn"
+        onClick={handleSubmit}
+      >
         Submit
       </Button>
     </Form>

@@ -47,42 +47,44 @@ const Reviews = ({ getMovieData, movie, reviews, setReviews }) => {
         </Col>
       </Row>
       <Row className="mt-2">
-        <Col>
+        <Col md={6}>
+          {" "}
+          {/* This makes it take up half the row on medium and larger screens */}
           <img src={movie?.poster} alt="" />
         </Col>
-        <Col>
-          {
-            <>
-              <Row>
-                <Col>
-                  <ReviewForm
-                    handleSubmit={addReview}
-                    revText={revText}
-                    labelText="Write a Review?"
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <hr />
-                </Col>
-              </Row>
-            </>
-          }
-          {reviews?.map((r) => {
-            return (
-              <>
-                <Row>
-                  <Col>{r.body}</Col>
-                </Row>
-                <Row>
-                  <Col>
-                    <hr />
-                  </Col>
-                </Row>
-              </>
-            );
-          })}
+        <Col md={6}>
+          {" "}
+          {/* This makes it take up half the row on medium and larger screens */}
+          <>
+            <Row>
+              <Col>
+                <ReviewForm
+                  handleSubmit={addReview}
+                  revText={revText}
+                  labelText="Write a Review?"
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <hr />
+              </Col>
+            </Row>
+            {reviews?.map((r) => {
+              return (
+                <>
+                  <Row>
+                    <Col>{r.body}</Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <hr />
+                    </Col>
+                  </Row>
+                </>
+              );
+            })}
+          </>
         </Col>
       </Row>
       <Row>

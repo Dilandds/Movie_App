@@ -41,12 +41,10 @@
   align-items: center;
 }
 
-.movie-buttons-container {
-  margin-top: 200px;
+.movie-button-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 300px;
+  align-items: center; /* To make sure they are aligned vertically */
+  gap: 20px; /* Optional: For some space between the buttons */
 }
 
 .play-button-icon-container {
@@ -74,8 +72,4 @@
     align-items: center;
     top: 20px;
   }
-}
-
-.margin-top-override {
-  margin-top: 125px !important; /* Adjust this value to your preference */
 }
